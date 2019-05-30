@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
-import { AnimationBuilder, AnimationService } from 'css-animator';
+// import { AnimationBuilder, AnimationService } from 'css-animator';
 import { Router } from '@angular/router';
 import { RegionOptions, REGION_VALUES } from './region_options';
 import { LocaleService } from 'app/locale.service';
@@ -15,15 +15,16 @@ export class LandingComponent implements OnInit, AfterViewInit {
   public selectOptions: RegionOptions[] = REGION_VALUES;
   public submitted = false;
 
-  private _animator: AnimationBuilder;
+  // private _animator: AnimationBuilder;
   private _regionSelection: any;
 
   constructor(
     private _elementRef: ElementRef,
     private router: Router,
     private _localeService: LocaleService,
-    animationService: AnimationService) {
-    this._animator = animationService.builder();
+    //animationService: AnimationService
+    ) {
+  //  this._animator = animationService.builder();
   }
 
   public ngOnInit() {
@@ -31,11 +32,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   public ngAfterViewInit() {
-    this._animator
-      .setType('fadeInUp')
-      .setDelay(150)
-      .setDuration(700)
-      .show(this._elementRef.nativeElement);
+    // this._animator
+    //   .setType('fadeInUp')
+    //   .setDelay(150)
+    //   .setDuration(700)
+    //   .show(this._elementRef.nativeElement);
   }
 
   get regionSelection() {

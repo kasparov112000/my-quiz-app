@@ -1,9 +1,13 @@
 import { Injectable, EventEmitter, isDevMode } from '@angular/core';
-import { Playlist, Track, QuestionType, Question } from './contracts';
+// import { Playlist, Track, QuestionType, Question } from './contracts';
 import { shuffle, scrollTo } from 'app/helpers';
 import { Observable } from 'rxjs';
 import { PlaylistService } from './playlist.service';
 import { delay, map, first } from 'rxjs/operators';
+import Playlist from './contracts/playlist';
+import Track from './contracts/track';
+import Question from './contracts/question';
+import QuestionType from './contracts/types';
 
 
 @Injectable({

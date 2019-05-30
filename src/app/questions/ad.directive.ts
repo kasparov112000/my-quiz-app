@@ -1,10 +1,9 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[container-ref]',
+  selector: '[question-host]',
 })
-export class ContainerRefDirective {
+export class QuestionDirective {
   constructor(public viewContainerRef: ViewContainerRef) { }
 }
 
-export default ContainerRefDirective;

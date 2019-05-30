@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { AnimatesDirective } from 'css-animator';
+// import { AnimatesDirective } from 'css-animator';
 import { QuizService } from '../quiz.service';
  
 @Component({
@@ -29,13 +29,13 @@ export class NavComponent implements OnInit {
     this.onGoHome.emit();
   }
 
-  public refresh(navAnimatesDirective: AnimatesDirective): void {
+  public refresh(/*navAnimatesDirective: AnimatesDirective*/): void {
     this.onRefresh.emit();
   }
 
-  public close(navAnimatesDirective: AnimatesDirective): void {
+  public close(/*navAnimatesDirective: AnimatesDirective*/): void {
     this.onClose.emit();
-    navAnimatesDirective.hide({ type: 'fadeOutUp', delay: 400, duration: 600 });
+   // navAnimatesDirective.hide({ type: 'fadeOutUp', delay: 400, duration: 600 });
   }
   
 

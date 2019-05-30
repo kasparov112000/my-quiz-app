@@ -6,9 +6,9 @@ import { Http, Response } from '@angular/http';
 
 
  
-import { Playlist } from 'app/contracts';
 import { LocaleService } from './locale.service';
 import { HttpClient } from 'selenium-webdriver/http';
+import Playlist from './contracts/playlist';
  
 
 @Injectable()

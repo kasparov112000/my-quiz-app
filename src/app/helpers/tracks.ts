@@ -1,4 +1,6 @@
-import { Track } from 'app/contracts';
+import Track from 'app/contracts/track';
+
+ 
 
 export function randomTracksExcluding(exclude: string, amount: number, tracks: Track[]): Track[] {
   let randomTracks: Track[] = [];

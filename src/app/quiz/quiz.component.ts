@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from 'app/quiz.service';
 import Unsubscriber from 'app/contracts/unsubscriber';
-import { Question } from 'app/contracts';
+ 
 import { Router } from '@angular/router';
 import { AnimatesDirective } from 'css-animator';
+import Question from 'app/contracts/question';
 
 @Component({
   selector: 'app-quiz',
@@ -54,7 +55,7 @@ export class QuizComponent extends Unsubscriber implements OnInit {
     return question.id;
   }
 
-  public onGoHome(navAnimatesDirective: AnimatesDirective): void {
+  public onGoHome(/*navAnimatesDirective: AnimatesDirective*/): void {
     setTimeout(() => {
       this._router.navigate(['/']);
     }, 1000);
@@ -64,7 +65,7 @@ export class QuizComponent extends Unsubscriber implements OnInit {
 
 
 
-  public onRefresh(navAnimatesDirective: AnimatesDirective): void {
+  public onRefresh(/*navAnimatesDirective: AnimatesDirective*/): void {
     this.quizService.close();
 
     setTimeout(() => {
@@ -75,8 +76,8 @@ export class QuizComponent extends Unsubscriber implements OnInit {
     }, 700);
   }
 
-  public onClose(navAnimatesDirective: AnimatesDirective): void {
-    this.onGoHome(navAnimatesDirective);
+  public onClose(/*navAnimatesDirective: AnimatesDirective*/): void {
+     this.onGoHome(/*navAnimatesDirective*/);
   }
 
   get questions(): Question[] {
