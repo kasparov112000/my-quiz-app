@@ -11,7 +11,10 @@ import { HttpClient } from 'selenium-webdriver/http';
 import Playlist from './contracts/playlist';
  
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class PlaylistService {
 
   private _apiUrl = 'api/playlist/random';

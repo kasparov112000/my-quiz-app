@@ -2,7 +2,8 @@ import { TemplateRef } from '@angular/core';
 
 import { GenericQuestion } from './generic_question';
 import Track from './track';
-import QuestionType from './question_type';
+import QuestionType from './types';
+
 
 export interface Question {
   id: number;

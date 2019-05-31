@@ -3,6 +3,7 @@ import { Component, Input, OnInit, ViewChild, ComponentFactoryResolver, OnDestro
 import { AdItem }      from './ad-item';
 import { AdComponent } from './ad.component';
 import { QuestionDirective } from './ad.directive';
+import Question from 'app/contracts/question';
 
 @Component({
   selector: 'app-question-holder',
@@ -15,6 +16,8 @@ import { QuestionDirective } from './ad.directive';
 })
 export class AdBannerComponent implements OnInit, OnDestroy {
   @Input() ads: AdItem[];
+  @Input() question: Question;
+
   currentAdIndex = -1;
   @ViewChild(QuestionDirective) questionHost: QuestionDirective;
   interval: any;

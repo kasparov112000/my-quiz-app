@@ -15,10 +15,13 @@ import { HttpModule } from '@angular/http';
 import  LocaleService from './locale.service';
 // import ContainerRefDirective from './container-ref.directive';
 import { QuestionsModule } from './questions/questions.module';
+import { QuizService } from './quiz.service';
+import { AdService } from './questions/ad.service';
+import { ContainerRefDirective } from './directives';
 //import ContainerRefDirective from './container-ref.directive';
 
 // import { QuestionComponent } from './question/question.component';
-myProviders: [PlaylistService, new LocaleService]
+// myProviders: [PlaylistService, new LocaleService]
 
 @NgModule({
   declarations: [
@@ -26,7 +29,7 @@ myProviders: [PlaylistService, new LocaleService]
     NavComponent,
     LandingComponent,
     QuizComponent,
-    //    ContainerRefDirective
+   // ContainerRefDirective
     //  QuestionComponent
 
   ],
@@ -41,9 +44,8 @@ myProviders: [PlaylistService, new LocaleService]
 
 
   ],
-  providers: [
-        LocaleService,
-        PlaylistService
+  providers: [  
+     
   ],
 
   bootstrap: [AppComponent]

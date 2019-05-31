@@ -5,7 +5,10 @@ export interface LocaleData {
   value: string;
 }
 
-@Injectable()
+@Injectable
+({
+  providedIn: 'root'
+})
 export class LocaleService {
 
   private _locale: LocaleData;
